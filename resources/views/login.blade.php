@@ -100,24 +100,8 @@
             </form>
 
 
-            <!-- Divider -->
-            <div class="divider">
-                <span></span>
-                <p>atau masuk dengan</p>
-                <span></span>
-            </div>
 
-
-            <!-- Google -->
-            <button type="button" class="google-button">
-
-                <span class="google-icon">G</span>
-
-                <span>Masuk dengan Google</span>
-
-            </button>
-
-
+            
             <!-- Register -->
             <p class="register-text">
                 Belum punya akun?
