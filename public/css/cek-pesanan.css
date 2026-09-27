@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    background-color: #08749a;
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.logo > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+}
+
+.logo b {
+    color: #08749a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.logo small {
+    font-size: 7.5px;
+    color: #64748b;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* ================= NAVIGASI ================= */
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 400;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+nav a.active,
+nav a:hover {
+    color: #08749a;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    color: #475569;
+}
+
+.nav-icons a {
+    color: inherit;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 25px auto;
+    flex: 1;
+}
+
+/* ================= SEARCH BOX ================= */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 10px 16px;
+    gap: 10px;
+    margin-bottom: 22px;
+    border: 1px solid #e2e8f0;
+}
+
+.search-box i {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 13px;
+    color: #1e293b;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+/* ================= ORDER LIST ================= */
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.order-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* ================= HEADER CARD ================= */
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 12.5px;
+}
+
+.status-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #08749a;
+    font-weight: 500;
+}
+
+.status-badge {
+    font-weight: 700;
+    font-size: 11.5px;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.sedang-dikemas {
+    color: #d97706;
+}
+
+.status-badge.sedang-dikirim {
+    color: #0284c7;
+}
+
+.status-badge.selesai {
+    color: #08749a;
+}
+
+/* ================= PRODUK ================= */
+
+.order-body {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    align-items: flex-start;
+}
+
+.product-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid #f1f5f9;
+    padding: 4px;
+    background: #ffffff;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.product-meta {
+    font-size: 11.5px;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.product-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #08749a;
+}
+
+/* ================= FOOTER CARD ================= */
+
+.order-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.total-label {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.total-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #08749a;
+}
+
+.btn-rincian {
+    padding: 6px 14px;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 6px;
+}
+
+.btn-rincian:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+/* ================= EMPTY STATE ================= */
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px dashed #cbd5e1;
+}
+
+.empty-state i {
+    font-size: 42px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+}
+
+.empty-state h3 {
+    font-size: 16px;
+    color: #334155;
+    margin-bottom: 4px;
+}
+
+.empty-state p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    padding: 16px 8%;
+    margin-top: 40px;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 8px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.footer-contact span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-contact i {
+    color: #08749a;
+}
+
+.copyright {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    font-size: 8px;
+    color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .order-body {
+        flex-wrap: wrap;
+    }
+
+    .product-details {
+        min-width: 150px;
+    }
+
+    .order-footer {
+        flex-wrap: wrap;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

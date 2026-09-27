@@ -1,0 +1,638 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f6f7fc;
+    color: #172033;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 64px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    background: #006f9f;
+    color: white;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo b {
+    font-size: 12px;
+    color: #006080;
+}
+
+.logo small {
+    display: block;
+    font-size: 5px;
+    color: #777;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 22px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 11px;
+}
+
+.navbar nav a:hover {
+    color: #0075a5;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icons a {
+    color: #222;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 28px auto 60px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 22px;
+}
+
+.payment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.back {
+    color: #172033;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ================= ALAMAT ================= */
+
+.address-section,
+.payment-method,
+.summary {
+    background: white;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .04);
+}
+
+.address-section h3,
+.payment-method h3,
+.summary h3 {
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.address-section h3 i,
+.payment-method h3 i {
+    color: #0079a8;
+    margin-right: 6px;
+}
+
+.address-section label {
+    display: block;
+    font-size: 9px;
+    margin-bottom: 6px;
+}
+
+.address-section label span {
+    color: red;
+}
+
+.address-section input[type="text"],
+.address-section textarea {
+    width: 100%;
+    border: 1px solid #d8dce5;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 10px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.address-section input[type="text"]:focus,
+.address-section textarea:focus {
+    border-color: #0075a5;
+}
+
+.address-section textarea {
+    height: 70px;
+    resize: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.checkbox {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.checkbox input {
+    width: 12px;
+    height: 12px;
+}
+
+.save-address {
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+    border: none;
+    background: #0075a5;
+    color: white;
+    padding: 9px 18px;
+    border-radius: 5px;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.save-address:hover {
+    background: #006080;
+}
+
+
+/* ================= ALAMAT TERSIMPAN ================= */
+
+.alamat-tersimpan {
+    display: none;
+    border: 1px solid #0075a5;
+    border-radius: 7px;
+    padding: 14px;
+}
+
+.alamat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8ebf0;
+}
+
+.alamat-header strong {
+    font-size: 11px;
+}
+
+.badge-utama {
+    display: inline-block;
+    background: #e7f5fa;
+    color: #0075a5;
+    font-size: 7px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.ubah-alamat {
+    border: none;
+    background: transparent;
+    color: #0075a5;
+    font-size: 9px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alamat-detail {
+    padding-top: 10px;
+}
+
+.alamat-detail strong {
+    display: block;
+    font-size: 10px;
+}
+
+.alamat-detail span {
+    display: block;
+    color: #777;
+    font-size: 8px;
+    margin-top: 3px;
+}
+
+.alamat-detail p {
+    color: #555;
+    font-size: 8px;
+    line-height: 1.5;
+    margin-top: 6px;
+}
+
+.jarak-apotek {
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    padding-top: 9px;
+    color: #777;
+    font-size: 7px;
+}
+
+.jarak-apotek i {
+    color: #0075a5;
+    margin-right: 4px;
+}
+
+
+/* ================= METODE PEMBAYARAN ================= */
+
+.payment-option {
+    background: #f1f4ff;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+.payment-option.active {
+    background: #eef3ff;
+}
+
+.payment-option > label {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    cursor: pointer;
+}
+
+.payment-option input {
+    margin-top: 2px;
+}
+
+.payment-info {
+    flex: 1;
+}
+
+.payment-info strong {
+    display: block;
+    font-size: 11px;
+}
+
+.payment-info small {
+    display: block;
+    color: #777;
+    font-size: 8px;
+    margin-top: 3px;
+}
+
+.payment-icon {
+    color: #0075a5;
+    font-size: 13px;
+}
+
+
+/* ================= DETAIL PEMBAYARAN ================= */
+
+.payment-detail {
+    display: none;
+    background: white;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.payment-option.active .payment-detail {
+    display: flex;
+}
+
+
+/* QRIS */
+
+.qris-detail {
+    align-items: center;
+    gap: 12px;
+}
+
+.qr-placeholder {
+    width: 90px;
+    height: 90px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    font-size: 55px;
+}
+
+.payment-detail-text {
+    flex: 1;
+}
+
+.payment-detail-text strong {
+    display: block;
+    font-size: 9px;
+    margin-bottom: 5px;
+}
+
+.payment-detail-text p {
+    color: #777;
+    font-size: 7px;
+    line-height: 1.5;
+}
+
+.payment-detail-text span {
+    display: block;
+    color: #e17b24;
+    font-size: 7px;
+    margin-top: 6px;
+}
+
+
+/* VIRTUAL ACCOUNT */
+
+.va-detail {
+    flex-direction: column;
+}
+
+.va-box {
+    background: #f4f6fb;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.va-box span {
+    display: block;
+    color: #777;
+    font-size: 7px;
+    margin-bottom: 5px;
+}
+
+.va-box strong {
+    font-size: 12px;
+    color: #0075a5;
+    letter-spacing: 1px;
+}
+
+.va-detail p,
+.cod-detail p {
+    color: #777;
+    font-size: 8px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+
+/* COD */
+
+.cod-detail {
+    flex-direction: column;
+}
+
+
+/* ================= RINGKASAN ================= */
+
+.summary {
+    height: fit-content;
+}
+
+.summary h3 {
+    margin-bottom: 15px;
+}
+
+.payment-product {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.product-icon {
+    width: 28px;
+    height: 28px;
+    background: #edf5ff;
+    color: #0075a5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-detail {
+    flex: 1;
+}
+
+.product-detail strong {
+    display: block;
+    font-size: 9px;
+}
+
+.product-detail small {
+    font-size: 7px;
+    color: #777;
+}
+
+.payment-product > span {
+    font-size: 8px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    margin: 9px 0;
+}
+
+.summary hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 12px 0;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+}
+
+.total strong {
+    color: #0074a5;
+    font-size: 16px;
+}
+
+.pay-button {
+    width: 100%;
+    border: none;
+    background: #0075a5;
+    color: white;
+    padding: 11px;
+    border-radius: 5px;
+    margin-top: 14px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.pay-button:hover {
+    background: #006080;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(240, 243, 250, .8);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    width: 330px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+.success-icon {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #edfff8;
+    color: #00a878;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.modal h2 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.modal p {
+    font-size: 9px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.modal-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+}
+
+.modal-buttons button {
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-size: 9px;
+}
+
+.modal-buttons button:last-child {
+    background: #006078;
+    color: white;
+    border: none;
+}
+
+
+/* ================= NOTIFIKASI ================= */
+
+.notifikasi {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: #333;
+    padding: 14px 22px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+    font-size: 11px;
+    z-index: 9999;
+    animation: muncul .3s ease;
+}
+
+@keyframes muncul {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+.notifikasi.hilang {
+    opacity: 0;
+    transition: .3s;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+}
