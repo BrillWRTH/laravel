@@ -4,12 +4,12 @@ document.querySelectorAll(".btn-tambah").forEach(button => {
 
         let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
 
-        let produk = {
-            name: this.dataset.name,
-            price: Number(this.dataset.price),
-            image: this.dataset.image,
-            quantity: 1
-        };
+       let produk = {
+        name: this.dataset.name,
+        price: Number(this.dataset.price),
+        image: this.dataset.image,
+        quantity: 1
+};
 
         let ada = keranjang.find(item => item.name === produk.name);
 

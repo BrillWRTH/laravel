@@ -211,59 +211,90 @@
 
             <div class="products">
 
+                <!-- Panadol -->
                 <div class="product-card">
                     <div class="product-image">
-
-                        <img src="https://via.placeholder.com/200" alt="Panadol Extra 500mg">
+                        <img src="{{ asset('images/Panadol-extra.jpg') }}" alt="Panadol Extra 500mg">
                     </div>
+
                     <h3>Panadol Extra 500mg</h3>
                     <p>Pereda sakit kepala dengan cepat.</p>
+
                     <div class="product-bottom">
                         <strong>Rp14.500</strong>
-                       <button class="btn-tambah" data-name="Panadol Extra 500mg" data-price="14500">
-                            <i class="fa-solid fa-cart-plus"></i>Tambah
+
+                        <button
+                            class="btn-tambah"
+                            data-name="Panadol Extra 500mg"
+                            data-price="14500"
+                            data-image="{{ asset('images/Panadol-extra.jpg') }}">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
                         </button>
                     </div>
                 </div>
 
+                <!-- Blackmores -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://via.placeholder.com/200" alt="Blackmores Bio C 1000mg">
+                        <img src="{{ asset('images/Blackmores.jpg') }}" alt="Blackmores Bio C 1000mg">
                     </div>
+
                     <h3>Blackmores Bio C 1000mg</h3>
                     <p>Vitamin C untuk menjaga daya tahan tubuh.</p>
+
                     <div class="product-bottom">
                         <strong>Rp132.000</strong>
-                        <button class="btn-tambah" data-name="Blackmores Bio C 1000mg" data-price="132000">
-                            <i class="fa-solid fa-cart-plus"></i>Tambah
+
+                        <button
+                            class="btn-tambah"
+                            data-name="Blackmores Bio C 1000mg"
+                            data-price="132000"
+                            data-image="{{ asset('images/Blackmores.jpg') }}">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
                         </button>
                     </div>
                 </div>
 
+                <!-- Sanmol -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://via.placeholder.com/200" alt="Sanmol Sirup Anak 60ml">
+                        <img src="{{ asset('images/SANMOL.jpg') }}" alt="Sanmol Sirup Anak 60ml">
                     </div>
+
                     <h3>Sanmol Sirup Anak 60ml</h3>
                     <p>Sirup penurun panas dan pereda nyeri anak.</p>
+
                     <div class="product-bottom">
                         <strong>Rp21.000</strong>
-                        <button class="btn-tambah" data-name="Sanmol Sirup Anak 60ml" data-price="21000">
-                            <i class="fa-solid fa-cart-plus"></i>Tambah
+
+                        <button
+                            class="btn-tambah"
+                            data-name="Sanmol Sirup Anak 60ml"
+                            data-price="21000"
+                            data-image="{{ asset('images/SANMOL.jpg') }}">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
                         </button>
                     </div>
                 </div>
 
+                <!-- Mylanta -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://via.placeholder.com/200" alt="Mylanta Sirup Maag 150ml">
+                        <img src="{{ asset('images/Mylanta Sirup.jpg') }}" alt="Mylanta Sirup Maag 150ml">
                     </div>
+
                     <h3>Mylanta Sirup Maag 150ml</h3>
                     <p>Meredakan gejala asam lambung dan sakit maag.</p>
+
                     <div class="product-bottom">
                         <strong>Rp48.000</strong>
-                        <button class="btn-tambah" data-name="Mylanta Sirup Maag 150ml" data-price="48000">
-                            <i class="fa-solid fa-cart-plus"></i>Tambah
+
+                        <button
+                            class="btn-tambah"
+                            data-name="Mylanta Sirup Maag 150ml"
+                            data-price="48000"
+                            data-image="{{ asset('images/SANMOL.jpg') }}">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
                         </button>
                     </div>
                 </div>

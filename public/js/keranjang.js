@@ -7,22 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function tampilkanKeranjang() {
 
-        document.querySelectorAll(".cart-item").forEach(item => item.remove());
+        document.querySelectorAll(".cart-item").forEach(item => {
+            item.remove();
+        });
 
         let subtotal = 0;
         let jumlah = 0;
 
         keranjang.forEach((produk, index) => {
 
-            subtotal += produk.price * produk.quantity;
-            jumlah += produk.quantity;
+            subtotal += Number(produk.price) * Number(produk.quantity);
+            jumlah += Number(produk.quantity);
 
             const item = document.createElement("div");
+
             item.className = "cart-item";
 
-            item.innerHTML = `
+                        item.innerHTML = `
                 <div class="product-image">
-                    <img src="/${produk.image}" alt="${produk.name}">
+                    <img src="${produk.image}" alt="${produk.name}">
                 </div>
 
                 <div class="product-info">
@@ -32,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
                 <strong class="price">
-                    Rp ${produk.price.toLocaleString("id-ID")}
+                    Rp ${Number(produk.price).toLocaleString("id-ID")}
                 </strong>
 
                 <div class="quantity">
@@ -45,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <i class="fa-regular fa-trash-can"></i>
                 </button>
             `;
-
             cartSection.insertBefore(item, addProduct);
 
             item.querySelector(".plus").addEventListener("click", function () {
@@ -54,38 +56,51 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             item.querySelector(".minus").addEventListener("click", function () {
+
                 if (keranjang[index].quantity > 1) {
                     keranjang[index].quantity--;
                     simpan();
                 }
+
             });
 
             item.querySelector(".delete").addEventListener("click", function () {
+
                 keranjang.splice(index, 1);
                 simpan();
+
             });
         });
 
+        // Jumlah produk
         document.querySelector("#jumlah-produk").textContent =
             `${jumlah} Produk Dipilih`;
 
+        // Ongkir
         const ongkir = keranjang.length > 0 ? 10000 : 0;
 
+        // Subtotal
         document.querySelector("#subtotal").textContent =
             "Rp " + subtotal.toLocaleString("id-ID");
 
+        // Ongkir
         document.querySelector("#ongkir").textContent =
             "Rp " + ongkir.toLocaleString("id-ID");
 
+        // Total
         document.querySelector("#total").textContent =
             "Rp " + (subtotal + ongkir).toLocaleString("id-ID");
     }
 
     function simpan() {
-        localStorage.setItem("keranjang", JSON.stringify(keranjang));
+
+        localStorage.setItem(
+            "keranjang",
+            JSON.stringify(keranjang)
+        );
+
         tampilkanKeranjang();
     }
 
     tampilkanKeranjang();
-
 });
