@@ -32,7 +32,6 @@
             <a href="{{ route('beranda') }}">Beranda</a>
             <a href="#">Tebus Resep</a>
             <a href="#">Katalog Obat</a>
-            <a href="{{ route('keranjang') }}">Keranjang</a>
             <a href="{{ route('cek-pesanan') }}">Cek Pesanan</a>
         </nav>
 

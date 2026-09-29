@@ -40,21 +40,6 @@
                         placeholder="Nama sesuai KTP" required >
                 </div>
 
-                <!-- WhatsApp -->
-                <div class="form-group">
-                    <label for="whatsapp">Nomor WhatsApp</label>
-
-                    <input
-                        type="tel"
-                        id="whatsapp"
-                        name="whatsapp"
-                        placeholder="081234567890" required >
-
-                    <small>
-                        Untuk konfirmasi resep apoteker & pelacakan kurir
-                    </small>
-                </div>
-
                 <!-- Email -->
                 <div class="form-group">
                     <label for="email">Email</label>

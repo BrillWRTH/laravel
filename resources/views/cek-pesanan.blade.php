@@ -49,10 +49,6 @@
                 Katalog Obat
             </a>
 
-            <a href="{{ route('keranjang') }}">
-                Keranjang
-            </a>
-
             <a href="{{ route('cek-pesanan') }}" class="active">
                 Cek Pesanan
             </a>
